@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-1: #0f044c;
+  --color-2: #141e61;
+  --color-3: #787a91;
+  --color-4: #eeeeee;
+  --color-celeste: #017aff;
+  --color-azul: #080f29;
+}
+body {
+  background-color: var(--color-azul);
+}
+nav {
+  transition: 1s all;
+}
+.bg-nav {
+  background: var(--color-azul);
+}
+.botonBurger {
+  background-color: var(--color-celeste);
+  width: 55px;
+  height: 50px;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.line {
+  background-color: white;
+  height: 6px;
+  width: 30px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+.active .line:nth-child(1) {
+  transform: translateY(12px) rotate(135deg);
+}
+.active .line:nth-child(2) {
+  transform: scale(0);
+}
+.active .line:nth-child(3) {
+  transform: translateY(-16px) rotate(-135deg);
+}
+.img-logo {
+  width: 279px;
+}
+.colorButton {
+  background-color: var(--color-celeste);
+}
+.bg-off-canvas {
+  background: var(--color-azul);
+}
+.imgCanva {
+  width: 279px;
+}
+.registro {
+  margin-top: 15px;
+}
+.subOpciones {
+  margin-bottom: 10px;
+}
+.categoriasCanva i {
+  color: var(--color-celeste);
+}
+.iconoX {
+  color: var(--color-celeste);
+  height: 50px;
+}
+.logo-admin {
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+}
+.button-logout-escondido {
+  display: none;
+}
+.button-logout-activo {
+  display: block;
+}
+.logo-admin-escondido {
+  display: none;
+}
+.logo-admin-activo {
+  display: block;
+}
+.icon-admin:hover {
+  width: 70px;
+}
+/* Style inputs */
+input[type="text"],
+.email,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: var(--color-1);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--color-2);
+}
+
+/* Style the container/contact section */
+.container-contacto {
+  border-radius: 5px;
+  background-color: #00000062;
+  padding: 10px;
+  margin-top: 50px;
+}
+.contacto-text {
+  text-align: center;
+}
+.contacto-text h2 {
+  font-weight: 400;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+/* ---------------------MEDIA QUERIES NAVBAR------------- */
+@media (min-width: 992px) {
+  .navBar {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .logoPagina {
+    margin-right: 0px;
+  }
+  .offcanvas-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+  .inputBuscar {
+    height: 40px;
+  }
+  .botonBuscar {
+    height: 40px;
+  }
+  .registro {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+  .opciones {
+    display: none;
+  }
+  .dropdown {
+    height: 39px;
+    padding-right: 18px;
+    margin-left: 10px;
+  }
+}
+/*----------- ESTILO FOOTER ---------------*/
+
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.col-3 ul li {
+  list-style: none;
+  padding: 5px;
+}
+.col-3 ul li a {
+  color: var(--color-4);
+  text-decoration: none;
+}
+
+.btn-codigo {
+  border: 1px solid var(--color-4);
+  color: var(--color-4);
+  margin-right: 10px;
+}
+.btn-codigo:hover {
+  background-color: #101643;
+  color: #eeeeee;
+}
+.container-redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-redes-sociales .fa-brands {
+  color: var(--color-4);
+  font-size: 2em;
+  margin: 20px;
+}

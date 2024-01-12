@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "Mario Marquesto",
+      "email": "mariocrack@gmail.com",
+      "password": "mario1",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "userName": "Julieta Colque",
+      "email": "juli23@gmail.com",
+      "password": "juli1",
+      "role": "admin"
+    },
+    {
+      "id": 3,
+      "userName": "Juan Morales",
+      "email": "juan11@gmail.com",
+      "password": "juan1",
+      "role": "admin"
+    }
+  ],
+  "destacados": [
+    {
+      "title": "aaaaa",
+      "gen": "cscs",
+      "desc": "aaaaaaa",
+      "img": "https://www.themoviedb.org/t/p/original/qTkJ6kbTeSjqfHCFCmWnfWZJOtm.jpg",
+      "peliKey": "2",
+      "id": 5
+    },
+    {
+      "title": "garra",
+      "gen": "",
+      "desc": "mmm",
+      "img": "https://www.themoviedb.org/t/p/original/e42d0nmC4GZjXjHyPvCeNiXZhW4.jpg",
+      "peliKey": "2",
+      "id": 6
+    },
+    {
+      "title": "",
+      "gen": "",
+      "desc": "aaaaaaaa",
+      "img": "",
+      "peliKey": "3",
+      "id": 7
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

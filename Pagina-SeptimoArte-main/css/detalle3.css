@@ -1,0 +1,190 @@
+:root {
+    --color-celeste: #017aff;
+    --color-azul: #080f29;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: var(--color-azul);
+  }
+  nav {
+    transition: 1s all;
+  }
+  .bg-nav {
+    background: var(--color-azul);
+  }
+  .botonBurger {
+    background-color: var(--color-celeste);
+    width: 55px;
+    height: 50px;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+  .line {
+    background-color: white;
+    height: 6px;
+    width: 30px;
+    border-radius: 3px;
+    transition: 0.5s;
+  }
+  .active .line:nth-child(1) {
+    transform: translateY(12px) rotate(135deg);
+  }
+  .active .line:nth-child(2) {
+    transform: scale(0);
+  }
+  .active .line:nth-child(3) {
+    transform: translateY(-16px) rotate(-135deg);
+  }
+  .img-logo {
+    width: 279px;
+  }
+  .colorButton {
+    background-color: var(--color-celeste);
+  }
+  .bg-off-canvas {
+    background: var(--color-azul);
+  }
+  .imgCanva {
+    width: 279px;
+  }
+  .registro {
+    margin-top: 15px;
+  }
+  .subOpciones {
+    margin-bottom: 10px;
+  }
+  .categoriasCanva i {
+    color: var(--color-celeste);
+  }
+  .iconoX {
+    color: var(--color-celeste);
+    height: 50px;
+  }
+  .logo-admin {
+    position: fixed;
+    bottom: 60px;
+    left: 10px;
+  }
+  .button-logout-escondido {
+    display: none;
+  }
+  .button-logout-activo {
+    display: block;
+  }
+  .logo-admin-escondido {
+    display: none;
+  }
+  .logo-admin-activo {
+    display: block;
+  }
+  .icon-admin:hover {
+    width: 70px;
+  }
+  /* ----------------MAIN-------------------- */
+  .detalle-design {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      ),
+      url(../img/img-detalle3/fondo-detalle3.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 130vh;
+  }
+  .titulo-detalle {
+    margin-top: 3em;
+  }
+  .videoDetalle {
+    width: 22em;
+    height: 15em;
+  }
+  .descripcion-detalle {
+    color: #8da0bc;
+  }
+  .info-list {
+    list-style: none;
+    padding: 0;
+  }
+  .info-list li strong {
+    font-weight: 400;
+    color: #8da0bc;
+  }
+  .boton {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    font-size: 1.12em;
+    
+  }
+  .boton:hover {
+    background: #ffc107;
+    color: #000;
+  }
+  .boton i {
+    margin-right: 1em;
+  }
+  /* ---------------------MEDIA QUERIES NAVBAR------------- */
+  @media (min-width: 992px) {
+    .navBar {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .logoPagina {
+      margin-right: 0px;
+    }
+    .offcanvas-body {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+    }
+    .inputBuscar {
+      height: 40px;
+    }
+    .botonBuscar {
+      height: 40px;
+    }
+    .registro {
+      margin-top: 0;
+      margin-left: 10px;
+    }
+    .opciones {
+      display: none;
+    }
+    .dropdown {
+      height: 39px;
+      padding-right: 18px;
+      margin-left: 10px;
+    }
+  }
+  /* ---------------------MEDIA QUERIES MAIN------------- */
+  @media (min-width: 768px) { 
+      .videoDetalle {
+          width: 30em;
+          height: 15em;
+        }
+   }
+   @media (min-width: 992px) { 
+      .videoDetalle {
+          width: 40em;
+          height: 20em;
+        }
+    }
+    @media (min-width: 1400px) { 
+      .videoDetalle {
+          width: 50em;
+          height: 30em;
+        }
+     }

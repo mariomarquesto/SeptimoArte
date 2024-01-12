@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEPTIMO ARTE</title>
+    <link
+      rel="shortcut icon"
+      href="../img/img-contacto/logo-favicon.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/822e20ead6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../css/contacto.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+        <div class="container navBar">
+          <a class="navbar-brand logoPagina" href="../index.html"
+            ><img
+              class="img-logo"
+              src="../img/img-contacto/logo-pagina.png"
+              alt="Logo Pagina"
+          /></a>
+          <div
+            class="navbar-toggler botonBurger shadow"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasScrolling"
+            aria-controls="offcanvasScrolling"
+          >
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div
+            class="offcanvas offcanvas-start bg-off-canvas"
+            data-bs-scroll="true"
+            data-bs-backdrop="false"
+            tabindex="-1"
+            id="offcanvasScrolling"
+            aria-labelledby="offcanvasScrollingLabel"
+          >
+            <div class="offcanvas-header pb-0">
+              <figure class="logoCanva">
+                <a href="../index.html">
+                  <img
+                    class="imgCanva"
+                    src="../img/img-contacto/logo-pagina.png"
+                    alt="logo"
+                  />
+                </a>
+              </figure>
+              <button
+                type="button"
+                class="btn text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              >
+                <i class="fa-solid fa-xmark iconoX"></i>
+              </button>
+            </div>
+            <div class="offcanvas-body">
+              <form class="d-flex">
+                <input
+                  class="form-control inputBuscar me-2 bg-transparent text-light border border-primary rounded-pill"
+                  type="search"
+                  placeholder="Buscar peliculas..."
+                  aria-label="Search"
+                />
+                <button
+                  class="btn btn-primary botonBuscar rounded-pill"
+                  type="submit"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+              <ul class="navbar-nav registro flex-row justify-content-center">
+                <li class="nav-item me-1">
+                  <button
+                    class="btn btn-primary rounded-pill"
+                    aria-current="page"
+                  >
+                    <a
+                      class="text-decoration-none text-light"
+                      href="login.html"
+                      >Entrar</a
+                    >
+                  </button>
+                </li>
+                <li class="nav-item me-1">
+                  <button class="btn btn-primary rounded-pill">
+                    <a
+                      class="text-decoration-none text-light"
+                      href="registrar.html"
+                      >Registrarse</a
+                    >
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    class="btn btn-primary rounded-pill button-logout-escondido"
+                    id="buttonLogout"
+                  >
+                    <a
+                      class="text-decoration-none text-light"
+                      onclick="cerrarSesion()"
+                      >Cerrar Sesion</a
+                    >
+                  </button>
+                </li>
+              </ul>
+              <ul
+                class="navbar-nav opciones align-items-center my-3 border-bottom border-dark"
+              >
+                <li class="nav-item subOpciones">
+                  <a
+                    class="text-decoration-none text-light"
+                    aria-current="page"
+                    href="#"
+                  >
+                    Inicio
+                  </a>
+                </li>
+                <li class="nav-item subOpciones">
+                  <a
+                    class="text-decoration-none text-light"
+                    aria-current="page"
+                    href="#"
+                  >
+                    Acerca de Nosotros
+                  </a>
+                </li>
+                <li class="nav-item subOpciones">
+                  <a
+                    class="text-decoration-none text-light"
+                    aria-current="page"
+                    href="#"
+                  >
+                    Contacto
+                  </a>
+                </li>
+              </ul>
+              <div class="dropdown">
+                <button
+                  class="btn text-light border-0 bg-transparent dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton2"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Categorias
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-dark"
+                  aria-labelledby="dropdownMenuButton2"
+                >
+                  <li><a class="dropdown-item active" href="#">Estrenos</a></li>
+                  <li><a class="dropdown-item" href="#">Ranking</a></li>
+                  <li><a class="dropdown-item" href="#">Mas Vistas</a></li>
+                  <li><a class="dropdown-item" href="#">Exclusivas</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container container-contacto">
+        <div class="contacto-text">
+          <h2 class="text-light">CONTACTO</h2>
+          <p class="text-light">Escribanos un mensaje o envienos su opinion:</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="../img/img-contacto/contact-us.svg" style="width: 100%" />
+          </div>
+          <div class="column">
+            <form>
+              <label class="text-light" for="fname">Nombre(s):</label>
+              <input type="text" id="nombre" placeholder="Tu nombre.." />
+              <label class="text-light" for="lname">Apellido:</label>
+              <input type="text" id="apellido" placeholder="Tu apellido.." />
+              <label class="text-light" for="correo">Correo: </label>
+              <input type="email" id="correo" class="email" />
+              <label class="text-light" for="subject">Sujeto</label>
+              <textarea
+                id="comentario"
+                placeholder="Escribe algo.."
+                style="height: 170px; resize: none"
+              ></textarea>
+              <button
+                type="button"
+                class="btn btn-outline-primary text-light"
+                onclick="enviarEmail(nombre,apellido,correo,comentario)"
+              >
+                Enviar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row flex-nowrap align-items-center">
+          <div class="col-3">
+            <ul>
+              <li><a href="html/404.html">Audio descriptivo</a></li>
+              <li><a href="html/404.html">Inversionistas</a></li>
+              <li><a href="html/404.html">Avisos legales</a></li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <ul>
+              <li><a href="html/404.html">Ayuda</a></li>
+              <li><a href="html/404.html">Empleo</a></li>
+              <li><a href="html/404.html">Preferencias</a></li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <ul>
+              <li><a href="html/404.html">Tarjetas de regalo</a></li>
+              <li><a href="html/404.html">Términos de uso</a></li>
+              <li><a href="html/404.html">Corporativa</a></li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <ul>
+              <li><a href="html/404.html">Prensa</a></li>
+              <li><a href="html/404.html">Privacidad</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section class="container-redes-sociales">
+        <div>
+          <button type="button" class="btn btn-codigo">
+            Codigo de Servicio
+          </button>
+        </div>
+        <div>
+          <a href="html/404.html"> <i class="fa-brands fa-facebook-f"></i></a>
+          <a href="html/404.html"> <i class="fa-brands fa-instagram"></i></a>
+          <a href="html/404.html"> <i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </section>
+    </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/contacto.js"></script>
+  </body>
+</html>

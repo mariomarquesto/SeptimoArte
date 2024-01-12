@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-1: #0f044c;
+  --color-2: #141e61;
+  --color-3: #787a91;
+  --color-4: #eeeeee;
+  --color-celeste: #017aff;
+  --color-azul: #080f29;
+  --gradient: linear-gradient(
+    135deg,
+    rgba(101, 128, 246, 0.531) 0%,
+    rgba(79, 79, 79, 0.668) 100%
+  );
+}
+
+/* Acerca de nosotros */
+body {
+  background-color: var(--color-azul);
+}
+nav {
+  transition: 1s all;
+}
+.bg-nav {
+  background: var(--color-azul);
+}
+.botonBurger {
+  background-color: var(--color-celeste);
+  width: 55px;
+  height: 50px;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.line {
+  background-color: white;
+  height: 6px;
+  width: 30px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+.active .line:nth-child(1) {
+  transform: translateY(12px) rotate(135deg);
+}
+.active .line:nth-child(2) {
+  transform: scale(0);
+}
+.active .line:nth-child(3) {
+  transform: translateY(-16px) rotate(-135deg);
+}
+.img-logo {
+  width: 279px;
+}
+.colorButton {
+  background-color: var(--color-celeste);
+}
+.bg-off-canvas {
+  background: var(--color-azul);
+}
+.imgCanva {
+  width: 279px;
+}
+.registro {
+  margin-top: 15px;
+}
+.subOpciones {
+  margin-bottom: 10px;
+}
+.categoriasCanva i {
+  color: var(--color-celeste);
+}
+.iconoX {
+  color: var(--color-celeste);
+  height: 50px;
+}
+.logo-admin {
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+}
+.button-logout-escondido {
+  display: none;
+}
+.button-logout-activo {
+  display: block;
+}
+.logo-admin-escondido {
+  display: none;
+}
+.logo-admin-activo {
+  display: block;
+}
+.icon-admin:hover {
+  width: 70px;
+}
+/* ACERCA NOSOTROS */
+.container-sobre-nosotros {
+  width: 100vh;
+}
+.color-span-1 {
+  color: var(--color-1);
+}
+
+.color-span-2 {
+  color: var(--color-2);
+}
+.span-titulo {
+  color: var(--color-1);
+  font-weight: 600;
+}
+.section1-sobre-nosotros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-4);
+  width: 100%;
+  background-image: var(--gradient),
+    url("../img/img-seccion-nosotros/img-section1-nosotros.jpg");
+}
+
+.section2-sobre-nosotros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-4);
+  background-image: var(--gradient),
+    url("../img/img-seccion-nosotros/img-section2-nosotros.jpg");
+}
+
+.section3-sobre-nosotros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-4);
+  background-image: var(--gradient),
+    url("../img/img-seccion-nosotros/img-section3-nosotros.jpg");
+}
+h1,
+h2 {
+  margin-top: 150px;
+}
+.nosotros-texto {
+  color: var(--color-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.nosotros-texto h1 {
+  font-size: 3em;
+  font-weight: 400;
+  width: 400px;
+}
+.nosotros-texto p {
+  width: 400px;
+  font-size: 1.2em;
+  font-weight: 200;
+}
+.container-sobre-nosotros h2 {
+  font-size: 2.9em;
+}
+.container-sobre-nosotros p {
+  color: #ffffffed;
+  font-size: 1.2em;
+}
+.mision-texto {
+  width: 600px;
+  padding: 50px;
+}
+.vision-texto {
+  width: 100%;
+}
+
+/* ---------------------MEDIA QUERIES NAVBAR------------- */
+@media (min-width: 992px) {
+  .navBar {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .logoPagina {
+    margin-right: 0px;
+  }
+  .offcanvas-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+  .inputBuscar {
+    height: 40px;
+  }
+  .botonBuscar {
+    height: 40px;
+  }
+  .registro {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+  .opciones {
+    display: none;
+  }
+  .dropdown {
+    height: 39px;
+    padding-right: 18px;
+    margin-left: 10px;
+  }
+}
+/*----------- ESTILO FOOTER ---------------*/
+
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 100vh;
+}
+
+.col-3 ul li {
+  list-style: none;
+  padding: 5px;
+}
+.col-3 ul li a {
+  color: var(--color-4);
+  text-decoration: none;
+}
+
+.btn-codigo {
+  border: 1px solid var(--color-4);
+  color: var(--color-4);
+  margin-right: 10px;
+}
+.btn-codigo:hover {
+  background-color: #101643;
+  color: #eeeeee;
+}
+.container-redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-redes-sociales .fa-brands {
+  color: var(--color-4);
+  font-size: 2em;
+  margin: 20px;
+}
+@media (min-width: 578px) {
+  .container-sobre-nosotros {
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+  }
+}

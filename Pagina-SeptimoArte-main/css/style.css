@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-1: #0f044c;
+  --color-2: #141e61;
+  --color-3: #787a91;
+  --color-4: #eeeeee;
+  --color-celeste: #017aff;
+  --color-azul: #080f29;
+}
+
+body {
+  background-color: var(--color-azul);
+}
+/*-----------------ESTILOS NAV----------------*/
+nav {
+  transition: 1s all;
+}
+.bg-nav {
+  background: var(--color-azul);
+}
+.botonBurger {
+  background-color: var(--color-celeste);
+  width: 55px;
+  height: 50px;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.line {
+  background-color: white;
+  height: 6px;
+  width: 30px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+.active .line:nth-child(1) {
+  transform: translateY(12px) rotate(135deg);
+}
+.active .line:nth-child(2) {
+  transform: scale(0);
+}
+.active .line:nth-child(3) {
+  transform: translateY(-16px) rotate(-135deg);
+}
+.img-logo {
+  width: 279px;
+}
+.colorButton {
+  background-color: var(--color-celeste);
+}
+.bg-off-canvas {
+  background: var(--color-azul);
+}
+.imgCanva {
+  width: 279px;
+}
+.registro {
+  margin-top: 15px;
+}
+.subOpciones {
+  margin-bottom: 10px;
+}
+.categoriasCanva i {
+  color: var(--color-celeste);
+}
+.anchoCanva {
+  width: 22rem;
+}
+.iconoX {
+  color: var(--color-celeste);
+  height: 50px;
+}
+
+.logo-admin {
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+}
+.button-logout-escondido {
+  display: none;
+}
+.button-logout-activo {
+  display: block;
+}
+.logo-admin-escondido {
+  display: none;
+}
+.logo-admin-activo {
+  display: block;
+}
+.icon-admin:hover {
+  width: 70px;
+}
+
+/* ---------------------MEDIA QUERIES NAVBAR------------- */
+@media (min-width: 992px) {
+  .navBar {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .logoPagina {
+    margin-right: 0px;
+  }
+  .offcanvas-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+  .inputBuscar {
+    height: 40px;
+  }
+  .botonBuscar {
+    height: 40px;
+  }
+  .registro {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+  .opciones {
+    display: none;
+  }
+  .dropdown {
+    height: 39px;
+    padding-right: 18px;
+    margin-left: 10px;
+  }
+}
+/*------------------------ PELICULA DESTACADA---------------------- */
+.pelicula-destacada {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  /* min-height: 40.62em; */
+  color: #fff;
+  /* background-position: center center;
+  background-size: cover; */
+  /* background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url("https://www.themoviedb.org/t/p/original/56v2KjBlU4XaOv9rVYEQypROD7P.jpg"); */
+  /* display: flex;
+  align-items: end; */
+}
+.pelicula-destacada .container {
+  margin-bottom: 6.25em;
+}
+.pelicula-destacada .titulo {
+  font-weight: 600px;
+  font-size: 3.12em;
+  margin-bottom: 0.4em;
+}
+.pelicula-destacada .boton {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  font-size: 1.12em;
+}
+.pelicula-destacada .boton:hover {
+  background: #fff;
+  color: #000;
+}
+.pelicula-destacada .boton i {
+  margin-right: 1em;
+}
+.imgCarousel {
+  width: 100%;
+  filter: opacity(50%);
+}
+/* ----------------TITULO DE CATEGORIAS Y CONTROLES------------- */
+.titulo-controles {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.titulo-controles h3 {
+  color: #fff;
+  font-size: 30px;
+}
+.titulo-controles .indicadores button {
+  background: #fff;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+}
+.titulo-controles .indicadores button:hover,
+.titulo-controles .indicadores button.active {
+  background: #296ed5;
+}
+/*------------------- CATEGORIAS Y FLECHAS ---------------------*/
+.categorias {
+  margin-top: 40px;
+}
+.categorias .contenedorPrincipal {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.categorias .contenedorPrincipal .flecha-izquierda,
+.categorias .contenedorPrincipal .flecha-derecha {
+  position: absolute;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  top: calc(50% - 25%);
+  font-size: 40px;
+  height: 50%;
+  line-height: 40px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 500;
+  transition: 0.2s ease all;
+}
+.categorias .contenedorPrincipal .flecha-izquierda:hover,
+.categorias .contenedorPrincipal .flecha-derecha:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.categorias .contenedorPrincipal .flecha-izquierda {
+  left: 0;
+}
+.categorias .contenedorPrincipal .flecha-derecha {
+  right: 0;
+}
+
+/* -------------CAROUSEL DE PELICULAS RECOMENDADAS--------------- */
+.contenedorPrincipal .contenedorCarousel {
+  width: 100%;
+  padding: 20px 0px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.contenedorPrincipal .contenedorCarousel .carousel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+/* .contenedorPrincipal .contenedorCarousel .carousel {
+  display: flex;
+  flex-wrap: nowrap;
+} */
+.contenedorPrincipal .contenedorCarousel .carousel .pelicula {
+  min-width: 20%;
+  transition: 1s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.contenedorPrincipal .contenedorCarousel .carousel .pelicula.hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+.contenedorPrincipal .contenedorCarousel .carousel .pelicula img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+/* -------------MEDIA QUERIES CATEGORIAS------------------ */
+@media (min-width: 768px) {
+  .contenedorPrincipal .contenedorCarousel .carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+@media (min-width: 1199.98px) {
+  .contenedorPrincipal .contenedorCarousel .carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}
+
+/*----------- ESTILO FOOTER ---------------*/
+
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.list-none {
+  list-style: none;
+}
+.btn-codigo {
+  border: 1px solid var(--color-4);
+  color: var(--color-4);
+  margin-right: 10px;
+}
+.btn-codigo:hover {
+  background-color: #101643;
+  color: #eeeeee;
+}
+.container-redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-redes-sociales .fa-brands {
+  color: var(--color-4);
+  font-size: 2em;
+  margin: 20px;
+}
+/*---------------- PAGINA 404 --------------------*/
+
+.img-bg {
+  height: 100vh;
+  background-image: url("../img/img-404/img-error-error.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-404 {
+  width: 600px;
+  padding: 30px;
+  margin: 0 auto;
+  background-color: rgba(215, 215, 215, 0.6);
+  text-align: center;
+}
+.info-404 h1 {
+  font-size: 3.5em;
+  font-weight: 200;
+}
+.info-404 p {
+  font-size: 1.3em;
+}
+
+.info-404 button a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 100;
+}

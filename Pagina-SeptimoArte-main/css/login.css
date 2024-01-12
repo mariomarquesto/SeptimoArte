@@ -1,0 +1,41 @@
+body {
+  font-family: "Dosis", sans-serif;
+}
+.login-design {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  height: 100vh;
+}
+.img-pagina {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url(../img/img-login/sonic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-logo{
+  height: 200px;
+}
+.login {
+  background: #080f29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.login-data h1{
+    font-weight: 200;
+}
+/*-----------------MEDIA QUERIES------------- */
+
+@media (min-width: 768px) {
+  .img-logo{
+    height: 400px;
+  }
+ }
